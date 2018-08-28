@@ -22,7 +22,7 @@ class dateRange extends dateInput {
         for (let i = +period.start; i < +period.end; i+= 3600000 * 168)
             dates.push(i)
         let periods = [];
-        for(let i=0;i<date.length;i++) {
+        for(let i = 0;i < dates.length;i ++) {
             let date = new Date(dates[i]);
             if (date.getDay() == 1) period = `${date.toLocaleDateString()}` - `${date.setHours(168).toLocaleDateString()}`;
             else if (date.getDay() == 2) period[i] = `${date.setHours(-24).toLocaleDateString()}` - `${date.setHours(144).toLocaleDateString()}`;
@@ -67,11 +67,10 @@ class dateRange extends dateInput {
         newDate.year = newDate.year + 1;
         return {
             start: date,
-            end: newDate
+            end: new Date
         }
     }
 }
 
-let range = Object.create(dateRange.prototype);
-range.constructor = range.constructor.bind(range);
+let range = Object.create(dataRange.prototype);
 range.constructor();
