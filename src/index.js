@@ -72,5 +72,5 @@ class dateRange extends dateInput {
     }
 }
 
-let range = Object.create(dataRange.prototype);
+let range = Object.create(dateRange.prototype);
 range.constructor();
