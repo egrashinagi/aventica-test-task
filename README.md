@@ -21,6 +21,13 @@ $ npm i
 ```
 
 ```
+$ npm build
+
+```
+
+```
 $ npm start
 
 ```
+
+Запустить -->  http://localhost:8000
