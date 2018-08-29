@@ -14,7 +14,7 @@ class dateInput {
 
 class dateRange extends dateInput {
     constructor() {
-        this.container = document.querySelector('.container-For-Last-Update-Record-And-Period-Items');
+        this.container = document.querySelector('.container-for-last-update-record-and-period-items');
     }
 
     createItems(period) {
@@ -50,7 +50,7 @@ class dateRange extends dateInput {
 
     renderItems(items) {
         this.container.appendChild(element = document.createElement('div'));
-        element.innerText = `Последнее изменение: ${this.updateTime.getDate() + '.' + this.updateTime.getMonth()  + '0'+ this.updateTime.getMonth() + this.updateTime.getMonth()}`;
+        element.innerText = `Последнее изменение: ${this.updateTime.getDate() + '.' + this.updateTime.getMonth()  + '0' + this.updateTime.getMonth() + this.updateTime.getMonth()}`;
 
         items.forEach(function(item) {
             let element = document.createElement('div', {innerText: item});
